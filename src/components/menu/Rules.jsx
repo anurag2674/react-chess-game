@@ -51,7 +51,7 @@ const ChessRules = () => {
                 <span className="text-2xl mr-2">{piece.symbol}</span>
                 {piece.name}
               </h3>
-              <p>{piece.movement}</p>
+              <div>{piece.movement}</div>
             </div>
           ))}
         </div>
@@ -73,7 +73,7 @@ const ChessRules = () => {
         <div className="space-y-4">
           <div>
             <h3 className="font-semibold">Win:</h3>
-            <p>Checkmate or opponent resignation</p>
+            <div>Checkmate or opponent resignation</div>
           </div>
           <div>
             <h3 className="font-semibold">Draw:</h3>

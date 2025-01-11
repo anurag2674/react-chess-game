@@ -16,7 +16,7 @@
  - Simple animation to move pieces
  - Cross-browser compatibility
 
-## Pre-requisites
+## Prerequisites
  - Node - ^18.0.0
 
 ## Local setup
@@ -24,3 +24,18 @@
 npm i
 npm start
 ```
+
+## Challenges faced
+ - Implementing modular moves logic
+ - Showing possible moves of each piece
+ - Resetting game
+
+## Future improvements
+ - Show possible moves of each piece
+ - Add sound effects
+ - Undo player move
+ - Drag and drop functionality
+
+## Screenshots
+
+![chess](./public/images/chess-game.gif)

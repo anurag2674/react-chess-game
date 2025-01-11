@@ -17,10 +17,10 @@
     }
 }
 .menuPanel{
-    border: '1px solid black';
-    height: '50vh';
-    width: '70vh';
-    background-color: 'aliceblue';
-    background-color: 'rgb(16 20 18 / 80%)';
-    border-radius: '5%';
+    border: 1px solid black;
+    height: 50vh;
+    width: 70vh;
+    background-color: aliceblue;
+    background-color: rgb(16 20 18 / 80%);
+    border-radius: 5%;
 }
