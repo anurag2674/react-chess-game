@@ -17,7 +17,7 @@ export const checkIfCanAnyPieceBlock = (
   } else if (attackerPiece[0]?.type === 'rook') {
     defensableSquares = getStraightDefensebaleSquares(attackerCurrentSquare, currentKingSquare);
   } else if (attackerPiece[0]?.type === 'queen') {
-    //compination between the bishop and rook because the queen will attack either diagonal or stright
+    //combination between the bishop and rook because the queen will attack either diagonal or stright
     let diagonal = getDiagonalDefensalbleSquares(attackerCurrentSquare, currentKingSquare);
     let straight = getStraightDefensebaleSquares(attackerCurrentSquare, currentKingSquare);
 

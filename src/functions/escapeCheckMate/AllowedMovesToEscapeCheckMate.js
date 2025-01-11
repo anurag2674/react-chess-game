@@ -134,7 +134,7 @@ export const AllowedMovesToEscapeCheckMate = (
 
   let oppositeSquare = getAttackerOppositeSquare(attackerDirection, currentKingSquare);
 
-  // rest the variable :
+  // reset the variable :
   let resultObject = {};
   let chekker = 'king';
   kingPossibleMoves = [];

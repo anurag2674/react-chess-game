@@ -23,7 +23,6 @@ import { checkKingStatus } from '../../functions/kingStatus/checkKingStatus';
 import { Notification } from '../toastifyAlert/toastify';
 import { checkIfPawnCanPromot } from '../../functions/promotion/checkIfPawnCanPromot';
 import Button from '@mui/material/Button';
-// TODO: HERE WAS THE currentSauare VARIABLE IF ANY ERRORS ACCUOR
 
 function ChessBoard() {
   const rows = ['8', '7', '6', '5', '4', '3', '2', '1'];
@@ -108,7 +107,6 @@ function ChessBoard() {
         (king?.length === 0 && Object.keys(defendersAndEaters)?.length === 0) ||
         checkMateAllowedMoves?.length === 0
       ) {
-        // here we need to show the end game component !!
         return setIsGameOver(true);
       }
     }
@@ -369,7 +367,7 @@ function ChessBoard() {
   }
 
   return (
-    <>
+    <div className="container">
       {isGameOver && (
         <div className="gameOver">
           <p className="title">The game is over !!</p>
@@ -390,32 +388,33 @@ function ChessBoard() {
           })}
         </div>
       )}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <Button variant="contained" onClick={() => window.location.reload()}>
-          New Game
-        </Button>
-      </div>
-      <div className="board">
-        {rows.map((row) => {
-          return cols.map((col) => {
-            const square = col + row;
-            const isBlackSquare = (cols.indexOf(col) + rows.indexOf(row)) % 2 === 1;
-            const piece = getPieceAt(square);
+      <div>
+        <div className="newGame">
+          <Button variant="contained" onClick={() => window.location.reload()}>
+            New Game
+          </Button>
+        </div>
+        <div className="board">
+          {rows.map((row) => {
+            return cols.map((col) => {
+              const square = col + row;
+              const isBlackSquare = (cols.indexOf(col) + rows.indexOf(row)) % 2 === 1;
+              const piece = getPieceAt(square);
 
-            return (
-              <div
-                key={square}
-                id={square}
-                className={`square ${isBlackSquare ? 'black' : 'white'}`}
-                onClick={() => handleMove(square, col, row)}
-              >
-                {piece && <Piece tabIndex="-1" color={piece?.color} type={piece.type} />}
-              </div>
-            );
-          });
-        })}
+              return (
+                <div
+                  key={square}
+                  id={square}
+                  className={`square ${isBlackSquare ? 'black' : 'white'}`}
+                  onClick={() => handleMove(square, col, row)}
+                >
+                  {piece && <Piece tabIndex="-1" color={piece?.color} type={piece.type} />}
+                </div>
+              );
+            });
+          })}
+        </div>
       </div>
-
       {piecesTrash.length !== 0 && (
         <div className="Trash">
           {piecesTrash?.map((piece) => {
@@ -425,7 +424,7 @@ function ChessBoard() {
           })}
         </div>
       )}
-    </>
+    </div>
   );
 }
 

@@ -1,5 +1,3 @@
-import { checkPlayerTurn } from '../playerTurn/checkPlayerTurn';
-
 export function checkIfmoveAllowed(
   col,
   row,
@@ -13,8 +11,6 @@ export function checkIfmoveAllowed(
 ) {
   let allowed = false;
   let x = false;
-
-  // checkPlayerTurn(col, row, playerTurn, pieces);
 
   if (isCheckMate.black === true || isCheckMate.white === true) {
     let { king, ...defendersAndEaters } = checkMateAllowedMoves;
@@ -45,7 +41,7 @@ export function checkIfmoveAllowed(
       }
     });
     if (allowed === false && x === false) {
-      //  return alert('GG white won the game')
+      return alert('White won the game');
     }
 
     return allowed;

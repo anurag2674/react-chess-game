@@ -10,7 +10,6 @@ function Promotion({ couldBePromoted, promotionType, pieceColor }) {
 
   return (
     <div className="promotion">
-      {/* <div className='pieces'> */}
       {promotionTypes?.map((piece) => (
         <>
           <span onClick={() => handleClick(piece)}>
@@ -18,7 +17,6 @@ function Promotion({ couldBePromoted, promotionType, pieceColor }) {
           </span>
         </>
       ))}
-      {/* </div> */}
     </div>
   );
 }

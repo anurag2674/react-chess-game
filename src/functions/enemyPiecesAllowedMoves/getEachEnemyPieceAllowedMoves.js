@@ -2,8 +2,6 @@
 import { checkMovesForSinglePiece } from '../singlePieceMoves/checkMovesSingle';
 
 export function getEachEnemyPieceAllowedMoves(pieces, enemyColor, chekker) {
-  //TODO: IT MIGHT BE SOMETHING WRONG WITH THE RETURN OF THIS FUNCTION
-
   let concatedArray = [];
   Object.keys(pieces)?.map((sinlgePiece) => {
     if (pieces[sinlgePiece]?.color === enemyColor) {

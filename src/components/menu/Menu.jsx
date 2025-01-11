@@ -25,17 +25,7 @@ const Menu = () => {
     setOpen(false);
   };
   return (
-    <div
-      className="flex col center alignCenter rowgp20"
-      style={{
-        border: '1px solid black',
-        height: '50vh',
-        width: '70vh',
-        backgroundColor: 'aliceblue',
-        backgroundColor: 'rgb(16 20 18 / 80%)',
-        borderRadius: '5%',
-      }}
-    >
+    <div className="flex col center alignCenter rowgp20 menuPanel">
       <Dialog open={open} onClose={handleClose} aria-labelledby="dialog-title" aria-describedby="dialog-description">
         <DialogTitle id="dialog-title">{openRulesDialog ? <>Rules of Chess</> : <>About me</>}</DialogTitle>
 
